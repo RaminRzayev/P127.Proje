@@ -1,0 +1,13 @@
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.exe
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.deps.json
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.runtimeconfig.json
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.runtimeconfig.dev.json
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.dll
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\bin\Debug\netcoreapp3.1\P127.ConsoleProje.pdb
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.csprojAssemblyReference.cache
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.AssemblyInfoInputs.cache
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.AssemblyInfo.cs
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.csproj.CoreCompileInputs.cache
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.dll
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.pdb
+C:\Users\Anubis\source\repos\P127.ConsoleProje\P127.ConsoleProje\obj\Debug\netcoreapp3.1\P127.ConsoleProje.genruntimeconfig.cache
