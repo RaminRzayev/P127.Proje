@@ -7,7 +7,7 @@ namespace P127.ConsoleProje.Models
     class Student
     {
         private string _fullname;
-        Group GroupNo;
+        public Group GroupNo;
         public bool Type;
         
         public string FullName
@@ -24,8 +24,13 @@ namespace P127.ConsoleProje.Models
                 }
             }
         }
-       
 
+        public Student(string fullname, Group group)
+        {
+            this.FullName = fullname;
+            GroupNo = group;
+            Type = false;
+        }
 
 
         public static bool CheckFullName(string fullname)
