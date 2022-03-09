@@ -12,34 +12,99 @@ namespace P127.ConsoleProje.Services
         private List<Group> _groups = new List<Group>();
         public List<Group> Groups => _groups;
 
-        public string CreateGroup(string groupNo, Categories category, bool isonline)
+        public string CreateGroup( Categories category, bool isonline)
         {
-            throw new NotImplementedException();
+            Group group = new Group( category, isonline);
+            foreach (var item in _groups)
+            {
+                if (item.No==group.No)
+                {
+                    Console.WriteLine($"{item.No}-nomreli Qrup hal hazirda movcuddur");
+                }
+            }
+            Groups.Add(group);
+            return group.No;
         }
 
-        public string CreateStudent()
+        public void CreateStudent(string no, string fullname, StudentType stdTyp)
         {
-            throw new NotImplementedException();
+            Group group = FindNo(no);
+            if (group== null)
+            {
+                Console.WriteLine($"{no}-adli qrup yoxdur");
+            }
+            if (group.Students.Length>=group.Limit)
+            {
+                Console.WriteLine($"{no}-adli qrup tam doludur");
+
+            }
         }
 
         public void EditGroup(string no, string newGroupno)
         {
-            throw new NotImplementedException();
+            Group group = FindNo(no);
+            if (group==null)
+            {
+                Console.WriteLine($"{group.No} nomreli qrup movcud deyil!");
+                return;
+            }
+            foreach (Group groupp in Groups)
+            {
+                if (groupp.No.ToLower().Trim()==newGroupno.ToLower().Trim())
+                {
+                    Console.WriteLine($"{newGroupno}-nomreli qrup artiq var");
+                    return;
+                }
+            }
+            group.No = newGroupno.ToUpper();
+            Console.WriteLine($"{no} adli qrup ugurla yeni adina:{newGroupno} deyistirildi");
         }
 
         public void ShowAllGroup()
         {
-            throw new NotImplementedException();
+            if (_groups.Count==0)
+            {
+                Console.WriteLine("Umumiyyetle Qrup yoxdur");
+                return;
+            }
+            foreach (Group group in Groups)
+            {
+                Console.WriteLine(group);
+            }
         }
 
         public void ShowAllStudents()
         {
-            throw new NotImplementedException();
+            Student[] students = new Student[0];
+            foreach (var group in _groups)
+            {
+                foreach (var student in group.Students)
+                {
+                    Array.Resize(ref students, students.Length + 1);
+                    students[students.Length - 1] = student;
+                }
+            }
+            Console.WriteLine(students);
         }
 
         public void ShowStudentsInGroup(string groupno)
         {
             throw new NotImplementedException();
         }
+
+
+
+        public Group FindNo(string no)
+        {
+            foreach (var item in _groups)
+            {
+                if (item.No == no)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
     }
 }
