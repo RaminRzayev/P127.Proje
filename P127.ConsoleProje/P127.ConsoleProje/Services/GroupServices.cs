@@ -11,8 +11,7 @@ namespace P127.ConsoleProje.Services
     {
         private List<Group> _groups = new List<Group>();
         public List<Group> Groups => _groups;
-        private List<Student> _students = new List<Student>();
-        public List<Student> Students => _students;
+
 
 
         public string CreateGroup( Categories category, bool isonline)
@@ -35,12 +34,15 @@ namespace P127.ConsoleProje.Services
             if (group== null)
             {
                 Console.WriteLine($"{no}-adli qrup yoxdur");
+                return;
             }
             if (group.Students.Length>=group.Limit)
             {
                 Console.WriteLine($"{no}-adli qrup tam doludur");
-
+                return;
             }
+            Student student = new Student(no, fullname, stdTyp);
+            group.AddStudent(student);
         }
 
         public void EditGroup(string no, string newGroupno)
@@ -72,7 +74,7 @@ namespace P127.ConsoleProje.Services
             }
             foreach (Group group in Groups)
             {
-                Console.WriteLine(group);
+                Console.WriteLine($"No: {group.No} - Nov: {group.Category}- Online? :{group.IsOnline} - Limit: {group.Limit} -  Telebe sayi: {group.Students.Length}");
             }
         }
 

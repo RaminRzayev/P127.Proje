@@ -18,7 +18,7 @@ namespace P127.ConsoleProje.Models
         public Group( Categories categories, bool isonline)
         {
             Students = new Student[0];
-            
+            IsOnline = isonline;
             switch (categories)
             {
                 case Categories.Programming:
@@ -48,11 +48,10 @@ namespace P127.ConsoleProje.Models
        
         public void AddStudent(Student student)
         {
-            if (Students.Length<=Limit)
-            {
+
                 Array.Resize(ref Students, Students.Length + 1);
                 Students[Students.Length - 1] = student;
-            }
+       
         }
         public override string ToString()
         {

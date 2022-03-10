@@ -75,6 +75,12 @@ namespace P127.ConsoleProje.Services
             string fullname = Console.ReadLine();
             Console.WriteLine("Daxil olacaginiz qrupun adini daxil edin:");
             string groupno = Console.ReadLine();
+            if (groupServices.FindNo(groupno) == null)
+            {
+                Console.WriteLine($"{groupno} nomreli qrup mobcud deyil!");
+                return;
+            }
+
             Console.WriteLine("Siz hansi telebe novune aidsiniz?");
             foreach (StudentType c in System.Enum.GetValues(typeof(StudentType)))
             {
@@ -101,10 +107,13 @@ namespace P127.ConsoleProje.Services
                         break;
                 }
             }
+            
             else
             {
                 Console.WriteLine("Zehmet olmasa Telebe novu secin.");
             }
+            StudentType type = (StudentType)category;
+            groupServices.CreateStudent(groupno, fullname,type );
         }
         public static void ShowStudentbyGroupNoMenu()
         {
