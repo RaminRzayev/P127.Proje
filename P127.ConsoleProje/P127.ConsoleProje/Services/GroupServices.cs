@@ -11,6 +11,9 @@ namespace P127.ConsoleProje.Services
     {
         private List<Group> _groups = new List<Group>();
         public List<Group> Groups => _groups;
+        private List<Student> _students = new List<Student>();
+        public List<Student> Students => _students;
+
 
         public string CreateGroup( Categories category, bool isonline)
         {

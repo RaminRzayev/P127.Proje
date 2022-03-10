@@ -21,6 +21,7 @@ namespace P127.ConsoleProje
                 Console.WriteLine("4.Qrup adini deyis");
                 Console.WriteLine("5.Butun telebeleri goster");
                 Console.WriteLine("6.Qrup uzre telebeleri goster");
+                Console.WriteLine("0. Cixis");
                 string strSelection = Console.ReadLine();
                 bool result = int.TryParse(strSelection, out selection);
                 if (result)
@@ -47,7 +48,7 @@ namespace P127.ConsoleProje
                             break;
 
                         default:
-                            Console.WriteLine("Duzgun nomre daxil edin");
+                            Console.WriteLine("Xos getdiniz");
                             break;
                     }
                 }
