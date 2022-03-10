@@ -21,6 +21,9 @@ namespace P127.ConsoleProje.Models
             Type = type;
            
         }
-
+        public override string ToString()
+        {
+            return $"Ad ve Soyad: {Fullname}, Qrupu: {GroupNo}, Tipi: {Type}";
+        }
     }
 }

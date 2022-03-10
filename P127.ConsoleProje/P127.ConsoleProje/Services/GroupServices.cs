@@ -62,7 +62,7 @@ namespace P127.ConsoleProje.Services
 
         public void ShowAllGroup()
         {
-            if (_groups.Count==0)
+            if (_groups.Count == 0)
             {
                 Console.WriteLine("Umumiyyetle Qrup yoxdur");
                 return;
@@ -73,7 +73,7 @@ namespace P127.ConsoleProje.Services
             }
         }
 
-        public void ShowAllStudents()
+        public Student[] ShowAllStudents()
         {
             Student[] students = new Student[0];
             foreach (var group in _groups)
@@ -84,12 +84,18 @@ namespace P127.ConsoleProje.Services
                     students[students.Length - 1] = student;
                 }
             }
-            Console.WriteLine(students);
+            return students;
         }
 
-        public void ShowStudentsInGroup(string groupno)
+        public Student[] ShowStudentsInGroup(string groupno)
         {
-            throw new NotImplementedException();
+            Group group = FindNo(groupno);
+            if (group==null)
+            {
+                Console.WriteLine($"{group} nomreli qrup movcud deyil!");
+                return null;
+            }
+            return group.Students;
         }
 
 

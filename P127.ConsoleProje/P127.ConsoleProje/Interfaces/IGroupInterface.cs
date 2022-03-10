@@ -14,8 +14,8 @@ namespace P127.ConsoleProje.Interfaces
         public string CreateGroup( Categories category, bool isonline);
         public void ShowAllGroup();
         public void EditGroup(string no, string newGroupno);
-        public void ShowStudentsInGroup(string groupno);
-        public void ShowAllStudents(); 
+        public Student[] ShowStudentsInGroup(string groupno);
+        public Student[] ShowAllStudents(); 
         public void CreateStudent(string groupNo, string fullname, StudentType stdType);
     }
 }

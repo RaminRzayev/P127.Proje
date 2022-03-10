@@ -22,13 +22,13 @@ namespace P127.ConsoleProje.Models
             switch (categories)
             {
                 case Categories.Programming:
-                    No = $"P-{100 + count}";
+                    No = $"P{100 + count}";
                     break;
                 case Categories.Design:
-                    No = $"D-{200 + count}";
+                    No = $"D{200 + count}";
                     break;
                 case Categories.SystemAdministrator:
-                    No = $"S-{300 + count}";
+                    No = $"S{300 + count}";
                     break;
                 default:
                     break;
@@ -54,7 +54,10 @@ namespace P127.ConsoleProje.Models
                 Students[Students.Length - 1] = student;
             }
         }
-        
-        
+        public override string ToString()
+        {
+            return $"No: {No}, Online: {IsOnline}";
+        }
+
     }
 }

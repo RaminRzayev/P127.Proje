@@ -6,7 +6,7 @@ namespace P127.ConsoleProje.Enum
 {
     enum StudentType
     {
-        Zemanetli,
+        Zemanetli=1,
         Zemanetsiz
     }
 }
